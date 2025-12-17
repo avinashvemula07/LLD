@@ -1,0 +1,261 @@
+Below is a **clean, polished version rewritten as structured course notes**, suitable for a paid course, internal training, or interview prep handbook.
+The tone is authoritative, concise, and instructional, while preserving all the original insights.
+
+---
+
+# Low-Level Design (LLD) Interview Formats
+
+### A Complete Overview
+
+Low-Level Design (LLD) interviews are often misunderstood. Many candidates prepare deeply for one format—usually Object-Oriented Design—only to discover that the interview tests a completely different skill set.
+
+**LLD is not a single interview type.**
+Companies evaluate LLD skills using multiple formats, each designed to assess different engineering competencies.
+
+For example:
+
+* A whiteboard OOD round at **Amazon** looks nothing like
+* A machine coding round at **Flipkart**, or
+* A concurrency-focused round at **Uber**
+
+This section introduces the **five most common LLD interview formats**, explains what each evaluates, and helps you identify which format you are likely to face.
+
+---
+
+## The Five Common LLD Interview Formats
+
+1. **Object-Oriented Design (OOD)**
+2. **Machine Coding**
+3. **Concurrency Design**
+4. **API Design**
+5. **Schema Design**
+
+Each format has its own expectations, deliverables, and evaluation criteria. Preparing for the wrong one is a common reason for rejection.
+
+> **Course Focus**
+> This course primarily covers:
+>
+> * Object-Oriented Design
+> * Machine Coding
+> * Concurrency Design
+>
+> API Design and Schema Design are typically covered as part of High-Level System Design (HLD) interviews and will be discussed briefly where relevant.
+
+---
+
+## 1. Object-Oriented Design (OOD)
+
+Object-Oriented Design is the most common LLD interview format at large technology companies such as **Google, Amazon, Meta, and Microsoft**.
+
+In an OOD interview, you are asked to design a system by identifying:
+
+* Classes and interfaces
+* Attributes and methods
+* Relationships between objects
+
+The emphasis is on **design thinking and communication**, not on writing executable code.
+
+### Format
+
+* **Duration:** 45–60 minutes
+* **Tools:** Whiteboard, shared document, or virtual whiteboard
+* **Code:** Pseudocode or skeleton classes (not runnable)
+* **Deliverables:**
+
+  * Class diagrams
+  * Interface definitions
+  * Key method signatures
+* **Interaction:** High (continuous discussion with the interviewer)
+
+### What Interviewers Evaluate
+
+| Skill              | Importance | Evaluation Criteria                       |
+| ------------------ | ---------- | ----------------------------------------- |
+| OOP Fundamentals   | High       | Encapsulation, inheritance, polymorphism  |
+| Design Patterns    | High       | Recognizing when patterns apply naturally |
+| SOLID Principles   | High       | SRP, OCP, LSP, ISP, DIP                   |
+| Communication      | High       | Clear explanation of decisions            |
+| Trade-off Analysis | Medium     | Ability to justify and revise choices     |
+
+---
+
+## 2. Machine Coding
+
+Machine coding interviews require you to write **fully working, runnable code** under strict time constraints. This format is especially common at **Indian tech companies and startups**.
+
+There is no pseudocode or hand-waving. Your code must:
+
+* Compile
+* Run
+* Produce correct output
+
+### Format
+
+* **Duration:** 60–90 minutes (sometimes up to 2 hours)
+* **Tools:** Local IDE or online coding platform
+* **Deliverable:** Working code
+* **Evaluation:** Offline code review after submission
+* **Interaction:** Low (mostly independent work)
+
+### What Interviewers Evaluate
+
+| Skill              | Importance | Evaluation Criteria             |
+| ------------------ | ---------- | ------------------------------- |
+| Coding Speed       | High       | Ability to implement quickly    |
+| Code Quality       | High       | Readability, maintainability    |
+| Correctness        | High       | Passes all test cases           |
+| Testing            | High       | Test cases or driver code       |
+| Project Structure  | Medium     | Separation of concerns          |
+| Edge Case Handling | Medium     | Input validation and robustness |
+
+### Best Practices
+
+* Start with **core functionality first**
+* Handle **input/output early**
+* Write **simple, testable code**
+* Test incrementally; do not wait until the end
+* Avoid premature optimization or overengineering
+
+---
+
+## 3. Concurrency Design
+
+Concurrency design interviews assess your ability to build **thread-safe systems**. These interviews are common at companies that work on high-performance, distributed, or real-time systems.
+
+You may be asked to:
+
+* Design thread-safe components
+* Identify race conditions
+* Implement synchronization strategies
+
+### Format
+
+* **Duration:** 60–90 minutes
+* **Tools:** Whiteboard + code (commonly Java or C++)
+* **Deliverable:** Thread-safe design and implementation
+* **Focus Areas:** Correctness, safety, and performance
+
+### What Interviewers Evaluate
+
+| Skill                      | Importance | Evaluation Criteria                       |
+| -------------------------- | ---------- | ----------------------------------------- |
+| Race Condition Detection   | High       | Identifying unsafe shared state           |
+| Synchronization Primitives | High       | Correct use of locks, mutexes, semaphores |
+| Deadlock Prevention        | High       | Understanding deadlock conditions         |
+| Correctness Reasoning      | High       | Proving thread safety                     |
+| Performance Awareness      | Medium     | Lock granularity and contention           |
+
+### Best Practices
+
+* Identify **shared mutable state first**
+* Choose synchronization primitives intentionally
+* Avoid deadlocks by design
+* Balance correctness with performance
+* Explain *why* your solution is safe
+
+---
+
+## 4. API Design
+
+API design interviews focus on creating **clean, intuitive interfaces** that other developers will use.
+
+The emphasis is on:
+
+* Method signatures
+* Contracts
+* Usability and consistency
+
+Internal implementation details are usually out of scope.
+
+### Format
+
+* **Duration:** 30–45 minutes
+* **Tools:** Whiteboard or shared document
+* **Deliverables:**
+
+  * API endpoints or method signatures
+  * Request/response formats
+  * Error handling strategy
+* **Interaction:** High
+
+### What Interviewers Evaluate
+
+| Skill           | Importance | Evaluation Criteria              |
+| --------------- | ---------- | -------------------------------- |
+| Usability       | High       | Easy to use correctly            |
+| Consistency     | High       | Naming and parameter conventions |
+| Extensibility   | Medium     | Backward compatibility           |
+| Error Handling  | Medium     | Clear errors and contracts       |
+| REST Principles | Medium     | Resource modeling and HTTP usage |
+
+---
+
+## 5. Schema Design
+
+Schema design interviews test your ability to model data efficiently and correctly. These questions often appear as part of system design interviews.
+
+### Format
+
+* **Duration:** 30–45 minutes
+* **Tools:** Whiteboard or ER diagrams
+* **Deliverables:**
+
+  * Tables and columns
+  * Relationships and constraints
+  * Indexing strategy
+
+### What Interviewers Evaluate
+
+| Skill          | Importance | Evaluation Criteria             |
+| -------------- | ---------- | ------------------------------- |
+| Data Modeling  | High       | Correct entity relationships    |
+| Normalization  | High       | Appropriate normalization level |
+| Constraints    | High       | Primary keys, foreign keys      |
+| Indexing       | Medium     | Query-driven indexes            |
+| Query Patterns | Medium     | Read/write efficiency           |
+
+---
+
+## How to Identify Your LLD Interview Type
+
+### 1. Ask Your Recruiter
+
+This is the most reliable approach.
+
+Recommended questions:
+
+* “What type of LLD round should I expect?”
+* “Will this be whiteboard-based or IDE-based?”
+* “How long is the LLD round?”
+* “Should I expect concurrency topics?”
+* “Will database or schema design be involved?”
+
+### 2. Use Company Signals
+
+| Company Type                    | Likely LLD Focus          |
+| ------------------------------- | ------------------------- |
+| Big Tech (US)                   | Object-Oriented Design    |
+| Indian consumer tech / startups | Machine Coding            |
+| Fintech / trading               | Concurrency & performance |
+| B2B SaaS                        | API Design                |
+| Database / analytics companies  | Schema Design             |
+
+---
+
+## Key Takeaway
+
+**LLD interviews are not uniform.**
+Success depends on identifying the interview format early and preparing specifically for the skills it tests.
+
+> Preparing deeply for the wrong LLD format is one of the most common—and avoidable—interview mistakes.
+
+---
+
+If you want, I can next:
+
+* Add **practice problems** per LLD type
+* Create **checklists** for each interview format
+* Convert this into **slides or PDFs**
+* Align it to **specific company interview patterns**
+
+Just tell me how you plan to use it.
